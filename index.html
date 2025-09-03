@@ -29,66 +29,54 @@
 
   <script src="./components/table-component/table-component.js"></script>
 
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="content">
-    <h1>CM200DX User Manual</h1>
-
-    <!-- This is the team member component use to display details about your team members -->
-    <div class="team-member-wrapper">
-      <team-member avatar="assets/profile-pic.jpg" name="SBS" department="Mechanical Engineering"
-        year="2022"></team-member>
+    <!-- Page content -->
+    <div class="main">
+      <h1>Introduction</h1>
+      <!-- This is the team member component use to display details about your team members -->
+      <div class="team-member-wrapper">
+        <team-member avatar="assets/profile-pic.jpg" name="SBS" department="Mechanical Engineering"
+          year="2022"></team-member>
+      </div>
+      <sl-divider></sl-divider>
+      <h2>I will attempt to break down CM200DX manuals</h2>
     </div>
-
-    <!-- This is a divide from the shoelace library for aesthetic purpose -->
-    <sl-divider></sl-divider>
-
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
-  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
-    <sl-icon name="arrow-up" label="Settings"></sl-icon>
-  </sl-button>
-
    <!-- Side navigation -->
-  <div class="sidenav">
-    <sl-tree>
-      <a href="./">Introduction</a>
-      <a href="./Manual Installation">Manual Installation</a>
-      <a href="./Hardware Manual"><b>1. </b>Hardware Manual</a>
-      <sl-tree-item>
-        <a href="./Hardware Manual/Mechanical Properties"><b>1.1 </b>Mechanical Properties</a>
-      </sl-tree-item>
-      <sl-tree-item>
-        <a href="./Hardware Manual/LV Pinouts"><b>1.2 </b>LV Pinouts</a>
-      </sl-tree-item>
-      <sl-tree-item>
-        <a href="./Hardware Manual/Precharge-Discharge"><b>1.3 </b>Precharge-Discharge</a>
-      </sl-tree-item>
-      <sl-tree-item>
-        <a href="./Hardware Manual/HV Connectors"><b>1.4 </b>HV Connectors</a>
-      </sl-tree-item>
-      <sl-tree-item>
-        <a href="./Hardware Manual/LV Properties"><b>1.5 </b>LV Properties</a>
-      </sl-tree-item>
-      <sl-tree-item>
-        <a href="./Hardware Manual/Typical Application Wiring"><b>1.6 </b>Typical Application Wiring</a>
-      </sl-tree-item>
-      
-      <a href="./Software Manual"><b>2. </b>Software Manual</a>
-      <sl-tree-item>
-        <a href="#"><b>2.1 </b>to be continued...</a>
-      </sl-tree-item>
-    </sl-tree>
+    <div class="sidenav">
+      <sl-tree>
+        <a href="./">Introduction</a>
+        <a href="./Manual Installation">Manual Installation</a>
+        <a href="./Hardware Manual"><b>1. </b>Hardware Manual</a>
+        <sl-tree-item>
+          <a href="./Hardware Manual/Mechanical Properties"><b>1.1 </b>Mechanical Properties</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="./Hardware Manual/LV Pinouts"><b>1.2 </b>LV Pinouts</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="./Hardware Manual/Precharge-Discharge"><b>1.3 </b>Precharge-Discharge</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="./Hardware Manual/HV Connectors"><b>1.4 </b>HV Connectors</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="./Hardware Manual/LV Properties"><b>1.5 </b>LV Properties</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="./Hardware Manual/Typical Application Wiring"><b>1.6 </b>Typical Application Wiring</a>
+        </sl-tree-item>
+        
+        <a href="./Software Manual"><b>2. </b>Software Manual</a>
+        <sl-tree-item>
+          <a href="#"><b>2.1 </b>to be continued...</a>
+        </sl-tree-item>
+      </sl-tree>
+    </div> 
   </div>
-
-  <!-- Page content -->
-  <div class="main">
-    <h2>I will attempt to break down CM200DX manuals</h2>
-  </div> 
-
   <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
   <script type="module" src="./components/table-component/table-component.js"></script>
 </body>
