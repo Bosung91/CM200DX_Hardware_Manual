@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
-  --base-clr: black;
-  --line-clr: grey;
+  --base-clr: #11121a;
+  --line-clr: #42434a;
   --hover-clr: #222533;
-  --text-clr: white;
+  --text-clr: #e6e6ef;
   --accent-clr: #5e63ff;
   --secondary-text-colr: #b0b3c1;
 }
@@ -12,7 +12,7 @@
   padding: 0;
 }
 html{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5rem;
 }
 body{
@@ -26,8 +26,6 @@ body{
 .homepage-h2{
   text-align: center;
 }
-
-
 #sidebar{
   box-sizing: border-box;
   height: 100vh;
@@ -108,7 +106,7 @@ body{
   transition: 200ms ease;
 }
 .rotate svg:last-child{
-  rotate: -180deg;
+  rotate: 180deg;
 }
 #sidebar .sub-menu{
   padding-left: 2em;
@@ -131,11 +129,7 @@ body{
 
 
 main{
-  margin: auto;
   padding: min(30px, 7%);
-}
-main h{
-  text-align: left;
 }
 main p{
   color: var(--secondary-text-colr);
@@ -153,7 +147,7 @@ main p{
   h2, p {margin-top: 1em}
 }
 
-@media(max-width: 2000px){
+@media(max-width: 800px){
   body{
     grid-template-columns: 1fr;
   }
@@ -212,7 +206,6 @@ main p{
       > div{
         overflow-x: auto;
       }
-
       li{
         display: inline-flex;
       }
