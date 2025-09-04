@@ -30,53 +30,73 @@
   <script src="./components/table-component/table-component.js"></script>
 
   <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
+
+  <script type="text/javascript" src="app.js" defer></script>
 </head>
 
 <body>
-  <div class="content">
-    <!-- Page content -->
-    <div class="main">
-      <h1>Introduction</h1>
-      <!-- This is the team member component use to display details about your team members -->
-      <div class="team-member-wrapper">
-        <team-member avatar="assets/profile-pic.jpg" name="SBS" department="Mechanical Engineering"
-          year="2022"></team-member>
-      </div>
-      <sl-divider></sl-divider>
-      <h2>I will attempt to break down CM200DX manuals</h2>
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <span class="logo">CM200DX User Manual</span>
+        <button onclick=toggleSidebar() id="toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </button>
+      </li>
+      <li class="active">
+        <a href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M400-120q-17 0-28.5-11.5T360-160v-480H160q0-83 58.5-141.5T360-840h240v120l120-120h80v320h-80L600-640v480q0 17-11.5 28.5T560-120H400Zm40-80h80v-240h-80v240Zm0-320h80v-240H360q-26 0-49 10.5T271-720h169v200Zm40 40Z"/></svg>
+          <span>Hardware Manual</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="mech-properties.html"><span>Mechanical Properties</span></a></li>
+            <li><a href="lv-pinouts.html"><span>LV Pinouts</span></a></li>
+            <li><a href="pcdc.html"><span>Precharge-Discharge</span></a></li>
+            <li><a href="hv-connectors.html"><span>HV Connectors</span></a></li>
+            <li><a href="lv-properties.html"><span>LV Properties</span></a></li>
+            <li><a href="typ-app-wiring.html"><span>Typical Application Wiring</span></a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m384-336 56-57-87-87 87-87-56-57-144 144 144 144Zm192 0 144-144-144-144-56 57 87 87-87 87 56 57ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+          <span>Software Manual</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#"><span>Section 1</span></a></li>
+            <li><a href="#"><span>Section 2</span></a></li>
+            <li><a href="#"><span>Section 3</span></a></li>
+            <li><a href="#"><span>Section 4</span></a></li>
+            <li><a href="#"><span>Section 5</span></a></li>
+            <li><a href="#"><span>Section 6</span></a></li>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- Page content -->
+  <main>
+    <h1>CM200DX User Manual Beautified</h1>
+    <!-- This is the team member component use to display details about your team members -->
+    <div class="team-member-wrapper">
+      <team-member avatar="assets/profile-pic.jpg" name="SBS" department="Mechanical Engineering"
+        year="2022"></team-member>
     </div>
-   <!-- Side navigation -->
-    <div class="sidenav">
-      <sl-tree>
-        <a href="./">Introduction</a>
-        <a href="./Manual Installation">Manual Installation</a>
-        <a href="./Hardware Manual"><b>1. </b>Hardware Manual</a>
-        <sl-tree-item>
-          <a href="./Hardware Manual/Mechanical Properties"><b>1.1 </b>Mechanical Properties</a>
-        </sl-tree-item>
-        <sl-tree-item>
-          <a href="./Hardware Manual/LV Pinouts"><b>1.2 </b>LV Pinouts</a>
-        </sl-tree-item>
-        <sl-tree-item>
-          <a href="./Hardware Manual/Precharge-Discharge"><b>1.3 </b>Precharge-Discharge</a>
-        </sl-tree-item>
-        <sl-tree-item>
-          <a href="./Hardware Manual/HV Connectors"><b>1.4 </b>HV Connectors</a>
-        </sl-tree-item>
-        <sl-tree-item>
-          <a href="./Hardware Manual/LV Properties"><b>1.5 </b>LV Properties</a>
-        </sl-tree-item>
-        <sl-tree-item>
-          <a href="./Hardware Manual/Typical Application Wiring"><b>1.6 </b>Typical Application Wiring</a>
-        </sl-tree-item>
-        
-        <a href="./Software Manual"><b>2. </b>Software Manual</a>
-        <sl-tree-item>
-          <a href="#"><b>2.1 </b>to be continued...</a>
-        </sl-tree-item>
-      </sl-tree>
-    </div> 
-  </div>
+    <sl-divider></sl-divider>
+    <h2 class="homepage-h2"><i>SIMPLE</i></h2>
+  </main>
   <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
   <script type="module" src="./components/table-component/table-component.js"></script>
 </body>
